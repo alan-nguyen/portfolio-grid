@@ -275,8 +275,15 @@
       // Get the current year for the copyright
       $("#year").text(new Date().getFullYear());
 
+      // Hide collapse items
       $(".port-item").click(function() {
         $(".collapse").collapse("hide");
+      });
+
+      // Init Ekko lightbox
+      $(document).on("click", '[data-toggle="lightbox"]', function(e) {
+        e.preventDefault();
+        $(this).ekkoLightbox();
       });
     </script>
   </body>
